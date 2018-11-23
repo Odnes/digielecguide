@@ -1,0 +1,7 @@
+digraph G {
+  rankdir=LR;
+  
+  S5 -> S6 -> S4 -> S2 -> S0 -> S1 -> S3 -> S5 [label="1"];
+  S4 -> S1 -> S3 -> S6 -> S5 -> S0 -> S2 -> S4 [label="0"];
+
+}
