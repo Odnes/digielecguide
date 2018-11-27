@@ -643,7 +643,7 @@ S
 
 \begin_layout Standard
 Τώρα που έχουμε κωδικοποιήσει δυαδικά τις καταστάσεις μας, αναθέτουμε την
- αποθήκευση κάθε δυαδικού ψηφίου (bit) σε ένα flip flop.
+ αποθήκευση κάθε δυαδικού ψηφίου (bit) σε ένα flip-flop.
  Έτσι, για το παράδειγμα μας, θα χρειαστούμε 3 flip-flop, που θα τα ονομάσουμε
  A, B, C:
 \end_layout
@@ -2408,10 +2408,14 @@ C
 \end_layout
 
 \begin_layout Standard
-Σημείωση: Μπορεί να βρείτε τις εξόδους των flip-flop, Q
+Σημείωση: Μπορεί να βρείτε τις εξόδους των flip-flop, 
+\series bold
+Q
 \begin_inset script subscript
 
 \begin_layout Plain Layout
+
+\series bold
 A
 \end_layout
 
@@ -2421,6 +2425,8 @@ A
 \begin_inset script subscript
 
 \begin_layout Plain Layout
+
+\series bold
 B
 \end_layout
 
@@ -2430,12 +2436,24 @@ B
 \begin_inset script subscript
 
 \begin_layout Plain Layout
+
+\series bold
 C
 \end_layout
 
 \end_inset
 
-να συμβολίζονται απλούστερα και ως A, B, C.
+
+\series default
+ 
+\series bold
+να συμβολίζονται
+\series default
+ 
+\series bold
+απλούστερα και ως A, B, C
+\series default
+.
 \end_layout
 
 \begin_layout Section
@@ -2742,7 +2760,7 @@ X
  Αυτό επειδή, για K=0 έχουμε εντολή θέσης (Set: J=1, K=0), δηλαδή Q(t+1)=1,
  ενώ για K=1 έχουμε εντολή συμπλήρωσης του Q(t)=0 (Q': J=1, K=1), δηλαδή
  Q(t+1)=Q'(t)=1.
- Γι'αυτό η K μαρκάρεται με X ως συνθήκη αδιαφορίας.
+ Γι'αυτό, η K μαρκάρεται με X ως συνθήκη αδιαφορίας.
 \end_layout
 
 \begin_layout Quote
@@ -5429,6 +5447,69 @@ X
 \end_inset
 
 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Σε αυτό το σημείο ήμαστε έτοιμοι να εξάγουμε τις εξισώσεις των εισόδων J
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+, K
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+, J
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+, K
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+, J
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+, K
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+ των flip-flop του κυκλώματος μας.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -6132,15 +6213,53 @@ x
 
 \begin_layout Subsection
 Με χρήση πίνακα Karnaugh
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
+\begin_layout Standard
+Ένας πίνακας Karnaugh μας επιτρέπει να εκμεταλλευτούμε την ικανότητα αναγνώρισης
+ μοτίβων που διαθέτει η ανθρώπινη όραση, για να εξάγουμε εύκολα μια όσο
+ το δυνατόν απλούστερη εξίσωση, για μια είσοδο ενός flip-flop.
+ Για το παράδειγμα μας θα χρειαστεί να καταστρώσουμε 6 πίνακες Karnaugh,
+ έναν για κάθε είσοδο.
+ Οι εν λόγω πίνακες, παρουσιάζονται παρακάτω.
+ Για την κατασκευή τους:
+\end_layout
 
+\begin_layout Itemize
+Οι καταστάσεις εξόδου των flip-flop Q(t), και η είσοδος x, μοιράζονται 
+\series bold
+διαδοχικά
+\series default
+ στον οριζόντιο και τον κατακόρυφο άξονα.
+ Συνηθίζεται, όταν έχουμε μόνο 2 flip-flops, το x να μπαίνει μόνο του, στον
+ κατακόρυφο άξονα.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Προσοχή:
+\series default
+ Η αρίθμηση των bits που αντιπροσωπεύουν τους παράγοντες κάθε άξονα γίνεται,
+ όχι σε δυαδικό σύστημα, αλλά σε 
+\series bold
+κώδικα Gray
+\series default
+.
+ Ο τρόπος αρίθμησης για μέχρι τέσσερεις παράγοντες, διακρίνεται από το παράδειγμ
+α μας (είναι απίθανο να σας ζητηθεί να εφαρμόσετε τη μέθοδο Karnaugh για
+ περισσότερους από 4 παράγοντες).
+ 
+\end_layout
+
+\begin_layout Itemize
+Βάζουμε παύλα (-) στους συνδυασμούς παραγόντων που δεν αντιστοιχούν σε εφικτή
+ κατάσταση του κυκλώματος.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
-placement h
+placement H
 wide false
 sideways false
 status open
@@ -6153,7 +6272,34 @@ status open
 
 
 \backslash
-begin{karnaugh-map}[4][2][1][$J_A K_A$][$x$] 
+iffalse In the Karnaugh maps, indeterminants and autoterms probably should
+ be the other way around.
+ It's just a kludge to allow for use of the preferred symbol (X).
+ It's also very convenient.
+ 
+\backslash
+fi
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{karnaugh-map}[4][4][1][$Q_C x$][$Q_A Q_B$] 
+\backslash
+minterms{2,5,7} 
+\backslash
+maxterms{0,1,3,4,6} 
+\backslash
+indeterminants{14,15} 
+\backslash
+autoterms[X] 
 \backslash
 end{karnaugh-map}
 \end_layout
@@ -6168,7 +6314,71 @@ status open
 
 
 \backslash
-begin{karnaugh-map}[4][2][1][$J_B K_B$][$x$] 
+begin{karnaugh-map}[4][4][1][$Q_C x$][$Q_A Q_B$] 
+\backslash
+minterms{8,9,11,13} 
+\backslash
+maxterms{10,12} 
+\backslash
+indeterminants{14,15} 
+\backslash
+autoterms[X] 
+\backslash
+end{karnaugh-map}
+\end_layout
+
+\end_inset
+
+ ———J
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+: Ax + BX + C ————-——————- K
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+: Ax+ Bx + C
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{karnaugh-map}[4][4][1][$Q_C x$][$Q_A Q_B$] 
+\backslash
+minterms{0,1,3,8,10} 
+\backslash
+maxterms{2,9,11} 
+\backslash
+indeterminants{14,15} 
+\backslash
+autoterms[X] 
 \backslash
 end{karnaugh-map}
 \end_layout
@@ -6176,6 +6386,126 @@ end{karnaugh-map}
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{karnaugh-map}[4][4][1][$Q_C x$][$Q_A Q_B$] 
+\backslash
+minterms{4,5,6,12,13} 
+\backslash
+maxterms{7} 
+\backslash
+indeterminants{14,15} 
+\backslash
+autoterms[X] 
+\backslash
+end{karnaugh-map}
+\end_layout
+
+\end_inset
+
+ ———J
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+: Ax + BX + C ————-——————- K
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+: Ax+ Bx + C
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{karnaugh-map}[4][4][1][$Q_C x$][$Q_A Q_B$] 
+\backslash
+minterms{0,9,13} 
+\backslash
+maxterms{1,4,5,8,12} 
+\backslash
+indeterminants{14,15} 
+\backslash
+autoterms[X] 
+\backslash
+end{karnaugh-map}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{karnaugh-map}[4][4][1][$Q_C x$][$Q_A Q_B$] 
+\backslash
+minterms{7,10,11} 
+\backslash
+maxterms{2,3,6} 
+\backslash
+indeterminants{14,15} 
+\backslash
+autoterms[X] 
+\backslash
+end{karnaugh-map}
+\end_layout
+
+\end_inset
+
+ ———J
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+: Ax + BX + C ————-——————- K
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+: Ax+ Bx + C
 \end_layout
 
 \end_inset
