@@ -2465,13 +2465,10 @@ C
 
 \begin_layout Standard
 Επειδή το κύκλωμα μας υλοποιείται με JK flip-flop θα χρειαστεί, προτού φτιάξουμε
- τις εξισώσεις εισόδων των flip-flop, να εντοπίσουμε περιπτώσεις αλλαγής
- σε κάποια είσοδο
-\series bold
-ΑΝΑΔΙΑΤΥΠΩΣΗ
-\series default
-, οι οποίες δεν προκαλούν μεταβολή στην έξοδο.
- Αυτές οι περιπτώσεις δε θα χρειαστεί να εκφραστούν στην εξίσωση εισόδου
+ τις εξισώσεις εισόδων των flip-flop, να εντοπίσουμε τις περιπτώσεις όπου
+ η τιμή κάποιας εκ των J, K ενός flip-flop, δεν έχει αντίκτυπο στον καθορισμό
+ της μελλοντικής εξόδου του.
+ Αυτές οι περιπτώσεις δε θα χρειαστεί να εκφραστούν στις εξισώσεις εισόδων
  του καθε flip-flop, και έτσι οι εξισώσεις θα είναι κατά πολύ απλούστερες.
 \end_layout
 
@@ -5460,11 +5457,15 @@ X
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Quote
+
+\emph on
 Σε αυτό το σημείο ήμαστε έτοιμοι να εξάγουμε τις εξισώσεις των εισόδων J
 \begin_inset script subscript
 
 \begin_layout Plain Layout
+
+\emph on
 A
 \end_layout
 
@@ -5474,6 +5475,8 @@ A
 \begin_inset script subscript
 
 \begin_layout Plain Layout
+
+\emph on
 A
 \end_layout
 
@@ -5483,6 +5486,8 @@ A
 \begin_inset script subscript
 
 \begin_layout Plain Layout
+
+\emph on
 B
 \end_layout
 
@@ -5492,6 +5497,8 @@ B
 \begin_inset script subscript
 
 \begin_layout Plain Layout
+
+\emph on
 B
 \end_layout
 
@@ -5501,6 +5508,8 @@ B
 \begin_inset script subscript
 
 \begin_layout Plain Layout
+
+\emph on
 C
 \end_layout
 
@@ -5510,712 +5519,21 @@ C
 \begin_inset script subscript
 
 \begin_layout Plain Layout
+
+\emph on
 C
 \end_layout
 
 \end_inset
 
  των flip-flop του κυκλώματος μας.
+
+\emph default
  
-\end_layout
-
-\begin_layout Standard
-J
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-= Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x' + Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x + Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x
-\end_layout
-
-\begin_layout Standard
-K
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-= Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x' + Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x + Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x + Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x 
-\end_layout
-
-\begin_layout Standard
-J
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-= Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x' + Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x + Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x + Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x' + Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x'
-\end_layout
-
-\begin_layout Standard
-K
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-= Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x' + Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x + Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x' + Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x' + Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x
-\end_layout
-
-\begin_layout Standard
-J
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
+\begin_inset Newline newline
 \end_inset
 
-= Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x' + Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x + Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x
-\end_layout
-
-\begin_layout Standard
-K
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-= Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x + Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
-
-x' + Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-A
-\end_layout
-
-\end_inset
-
-Q'
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-B
-\end_layout
-
-\end_inset
-
-Q
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-C
-\end_layout
-
-\end_inset
 
-x
 \end_layout
 
 \begin_layout Subsection
@@ -6227,28 +5545,28 @@ x
  μοτίβων που διαθέτει η ανθρώπινη όραση, για να εξάγουμε εύκολα μια όσο
  το δυνατόν απλούστερη εξίσωση, για μια είσοδο ενός flip-flop.
  Για το παράδειγμα μας θα χρειαστεί να καταστρώσουμε 6 πίνακες Karnaugh,
- έναν για κάθε είσοδο.
- Οι εν λόγω πίνακες, παρουσιάζονται παρακάτω.
+ έναν για κάθε είσοδο flip-flop.
+ Οι εν λόγω πίνακες παρουσιάζονται παρακάτω.
  Για την κατασκευή τους:
 \end_layout
 
-\begin_layout Itemize
-Οι καταστάσεις εξόδου των flip-flop Q(t), και η είσοδος x, μοιράζονται 
+\begin_layout Enumerate
+Μοιράζουμε 
 \series bold
 διαδοχικά
 \series default
- στον οριζόντιο και τον κατακόρυφο άξονα.
- Συνηθίζεται, όταν έχουμε μόνο 2 flip-flops, το x να μπαίνει μόνο του, στον
+, στον οριζόντιο και τον κατακόρυφο άξονα, τις καταστάσεις εξόδου των flip-flop
+ Q(t), και την είσοδο x.
+ Συνηθίζεται, όταν έχουμε μόνο 2 flip-flops, το x να μπαίνει μόνο του στον
  κατακόρυφο άξονα.
-\end_layout
-
-\begin_layout Itemize
+ Χωρίζουμε τον πίνακα σε κελιά, κάθε ένα εκ των οποίων αντιπροσωπεύει έναν
+ πιθανό συνδυασμό τιμών των παραγόντων που μοιράσαμε στους άξονες.
 
 \series bold
-Προσοχή:
+ Προσοχή:
 \series default
- Η αρίθμηση των bits που αντιπροσωπεύουν τους παράγοντες κάθε άξονα γίνεται,
- όχι σε δυαδικό σύστημα, αλλά σε 
+ Η αρίθμηση κάθε κελιού είναι αυστηρή και γίνεται, όχι σε δυαδικό σύστημα,
+ αλλά σε 
 \series bold
 κώδικα Gray
 \series default
@@ -6259,19 +5577,48 @@ x
  
 \end_layout
 
-\begin_layout Itemize
-Βάζουμε παύλα (-) στους συνδυασμούς παραγόντων που δεν αντιστοιχούν σε εφικτή
- κατάσταση του κυκλώματος.
+\begin_layout Enumerate
+Βάζουμε παύλα (-) μέσα στα κελιά που δεν αντιστοιχούν σε εφικτή κατάσταση
+ του κυκλώματος.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 Το περιεχόμενο των κελιών του πίνακα αντιπροσωπεύει την τιμή της εισόδου
  flip-flop, την εξίσωση της οποίας αναζητάμε, για τον συνδυασμό των παραγόντων
  που αντιστοιχούν στο κελί.
+ Αντιγράφουμε από τον πίνακα καταστάσεων.
+\end_layout
+
+\begin_layout Enumerate
+Πλαισιώνουμε, σε τετράγωνο ή παραλληλόγραμμο σχήμα, όσα κελιά είναι γειτονικά
+ μεταξύ τους και περιέχουν τη μονάδα.
+ Τα κελιά που αγγίζουν κάποια άκρη του πίνακα, θεωρούνται γειτονικά με τα
+ κελιά που αγγίζουν την απέναντι άκρη.
+ Πλαισιώνουμε σε δυάδες, τετράδες και οκτάδες.
+ Στοχεύουμε στην ένταξη όσο το δυνατόν περισσοτέρων κελιών σε ένα πλαίσιο.
+ Επιτρέπεται η επικάλυψη κελιών από πολλαπλά πλαίσια.
 \end_layout
 
 \begin_layout Standard
-.
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+
+\emph on
+Καταστρώνουμε πίνακες Karnaugh για εξαγωγή απλοποιημένων εξισώσεων εισόδου
+ των flip-flops A, B, C:
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 placement H
 wide false
@@ -7165,6 +6512,705 @@ B
 \shape italic
 Η ακόλουθη μέθοδος είναι προαιρετική.
  Εάν δεν έχετε χρόνο, προσπεράστε την.
+\end_layout
+
+\begin_layout Standard
+J
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+= Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x' + Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x + Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x
+\end_layout
+
+\begin_layout Standard
+K
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+= Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x' + Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x + Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x + Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x 
+\end_layout
+
+\begin_layout Standard
+J
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+= Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x' + Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x + Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x + Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x' + Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x'
+\end_layout
+
+\begin_layout Standard
+K
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+= Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x' + Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x + Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x' + Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x' + Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x
+\end_layout
+
+\begin_layout Standard
+J
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+= Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x' + Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x + Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x
+\end_layout
+
+\begin_layout Standard
+K
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+= Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x + Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x' + Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+Q'
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+
+Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+
+x
 \end_layout
 
 \begin_layout Paragraph
