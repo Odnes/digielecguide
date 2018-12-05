@@ -5563,8 +5563,12 @@ C
  Q(t), και την είσοδο x.
  Συνηθίζεται, όταν έχουμε μόνο 2 flip-flops, το x να μπαίνει μόνο του στον
  κατακόρυφο άξονα.
- Χωρίζουμε τον πίνακα σε κελιά, κάθε ένα εκ των οποίων αντιπροσωπεύει έναν
- πιθανό συνδυασμό τιμών των παραγόντων που μοιράσαμε στους άξονες.
+ 
+\bar under
+Χωρίζουμε
+\bar default
+ τον πίνακα σε κελιά, κάθε ένα εκ των οποίων αντιπροσωπεύει έναν πιθανό
+ συνδυασμό τιμών των παραγόντων που μοιράσαμε στους άξονες.
 
 \series bold
  Προσοχή:
@@ -5990,6 +5994,10 @@ C
 +
 \color lime
  
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -6171,10 +6179,19 @@ A
  
 \series bold
 +
-\series default
- 
-\series bold
+\begin_inset VSpace medskip
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
 \color orange
+
+\begin_inset space \qquad{}
+\end_inset
+
 Q
 \begin_inset script subscript
 
@@ -8197,10 +8214,6 @@ C
 \end_inset
 
 = Α + Β' (θεώρημα DeMorgan).
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \begin_layout Section
