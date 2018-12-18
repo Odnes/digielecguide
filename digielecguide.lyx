@@ -10,6 +10,7 @@
 \usepackage{xparse}
 \usepackage{xstring}
 \usepackage{karnaugh-map}
+\usepackage{amsmath}
 \definecolor{pink}{RGB}{255, 130, 130}
 \definecolor{lime}{RGB}{23, 255, 23}
 \definecolor{orange}{RGB}{219, 215, 0}
@@ -82,6 +83,14 @@
 
 \begin_layout Title
 Ανάλυση και σχεδιασμός σύγχρονων ακολουθιακών κυκλωμάτων
+\end_layout
+
+\begin_layout Author
+by thcloak
+\end_layout
+
+\begin_layout Address
+Original can be found at: github.com/thcloak/digielecguide
 \end_layout
 
 \begin_layout Part*
@@ -229,9 +238,17 @@
 
 \begin_layout Standard
 Στο διάγραμμα καταστάσεων, οι καταστάσεις S αναπαρίστανται ως κύκλοι, και
- οι μεταβάσεις, για x=1 ή x=0, ως κατευθυνόμενα βέλη που συνδέουν τις διάδοχες
- καταστάσεις (αφήστε λίγο κενό χώρο εντός των κύκλων, για να συμπληρώσετε
- αργότερα τις δυαδικές αναπαραστάσεις των καταστάσεων): 
+ οι μεταβάσεις, για x
+\series bold
+=
+\series default
+1 ή x
+\series bold
+=
+\series default
+0, ως κατευθυνόμενα βέλη που συνδέουν τις διάδοχες καταστάσεις (αφήστε λίγο
+ κενό χώρο εντός των κύκλων, για να συμπληρώσετε αργότερα τις δυαδικές αναπαραστ
+άσεις των καταστάσεων): 
 \end_layout
 
 \begin_layout Quote
@@ -272,7 +289,11 @@
 
 \end_inset
 
-= 4 δεν φτάνουν οι συνδυασμοί, ενώ 2
+
+\series bold
+=
+\series default
+ 4 δεν φτάνουν οι συνδυασμοί, ενώ 2
 \begin_inset script superscript
 
 \begin_layout Plain Layout
@@ -281,7 +302,11 @@
 
 \end_inset
 
-= 8 ένας συνδυασμός περισσεύει.
+
+\series bold
+=
+\series default
+ 8 ένας συνδυασμός περισσεύει.
  Αυτό όμως δε μας πειράζει.
  Κάθε δυαδικό ψηφίο, στο κύκλωμα μας θα αντιπροσωπεύει ένα flip-flop.
  Έτσι, λέμε:
@@ -632,7 +657,11 @@ S
 
 \end_inset
 
-= 8 ≥ 7.
+
+\series bold
+=
+\series default
+ 8 ≥ 7.
  Αντιστοιχίζουμε:
 \begin_inset Newpage pagebreak
 \end_inset
@@ -662,7 +691,11 @@ S
 Στη συνέχεια, σχεδιάζουμε τον πίνακα καταστάσεων.
  Ο πίνακας αυτός αποτελείται από τις πιθανές καταστάσεις σε μια δεδομένη
  χρονική στιγμή t, και από τις δυνατές καταστάσεις τους στον επόμενο χτύπο
- του ρολογιού, t+1.
+ του ρολογιού, t
+\series bold
++
+\series default
+1.
  
 \series bold
 Συμβολίζουμε με Q την έξοδο των flip-flop.
@@ -757,7 +790,11 @@ S
 \begin_inset Text
 
 \begin_layout Plain Layout
-Επόμενη Κατάσταση (t+1)
+Επόμενη Κατάσταση (t
+\series bold
++
+\series default
+1)
 \end_layout
 
 \end_inset
@@ -2530,7 +2567,11 @@ Q(t)
 \begin_layout Plain Layout
 
 \size larger
-Q(t+1)
+Q(t
+\series bold
++
+\series default
+1)
 \end_layout
 
 \end_inset
@@ -2761,9 +2802,55 @@ X
 Οι συνθήκες αδιαφορίας σημειώνονται με Χ.
  Παρατηρήστε ότι, για παράδειγμα, στη δεύτερη γραμμή του πίνακα, ανεξαρτήτως
  της τιμής του Κ, η τιμή της εξόδου θα μεταβεί από το 0 στο 1.
- Αυτό επειδή, για K=0 έχουμε εντολή θέσης (Set: J=1, K=0), δηλαδή Q(t+1)=1,
- ενώ για K=1 έχουμε εντολή συμπλήρωσης του Q(t)=0 (Q': J=1, K=1), δηλαδή
- Q(t+1)=Q'(t)=1.
+ Αυτό επειδή, για K
+\series bold
+=
+\series default
+0 έχουμε εντολή θέσης (Set: J
+\series bold
+=
+\series default
+1, K
+\series bold
+=
+\series default
+0), δηλαδή Q(t
+\series bold
++
+\series default
+1)
+\series bold
+=
+\series default
+1, ενώ για K
+\series bold
+=
+\series default
+1 έχουμε εντολή συμπλήρωσης του Q(t)
+\series bold
+=
+\series default
+0 (Q': J
+\series bold
+=
+\series default
+1, K
+\series bold
+=
+\series default
+1), δηλαδή Q(t
+\series bold
++
+\series default
+1)
+\series bold
+=
+\series default
+Q'(t)
+\series bold
+=
+\series default
+1.
  Γι'αυτό, η K μαρκάρεται με X ως συνθήκη αδιαφορίας.
 \end_layout
 
@@ -2850,7 +2937,11 @@ X
 \begin_inset Text
 
 \begin_layout Plain Layout
-Επόμενη Κατάσταση (t+1)
+Επόμενη Κατάσταση (t
+\series bold
++
+\series default
+1)
 \end_layout
 
 \end_inset
@@ -7859,7 +7950,7 @@ C
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7907,7 +7998,7 @@ C
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7951,7 +8042,7 @@ C
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7991,7 +8082,7 @@ C
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8036,7 +8127,7 @@ C
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8085,7 +8176,7 @@ C
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -8209,11 +8300,132 @@ C
 \series bold
 δεν
 \series default
- ισχύει (Α'Β)' = ΑΒ', αλλά (Α'Β)' = (Α')' + Β' = 
+ ισχύει (Α'Β)' 
+\series bold
+=
+\series default
+ ΑΒ', αλλά (Α'Β)' 
+\series bold
+=
+\series default
+ (Α')' 
+\series bold
++
+\series default
+ Β' 
+\series bold
+=
+\series default
+ 
 \begin_inset Newline newline
 \end_inset
 
-= Α + Β' (θεώρημα DeMorgan).
+
+\series bold
+=
+\series default
+ Α 
+\series bold
++
+\series default
+ Β' (θεώρημα DeMorgan).
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Σημείωση: Στην ενότητα αυτή, για ευκρίνεια και για περαιτέρω εξοικείωση
+ με το συμβολισμό, θα γράφουμε A αντί για Q
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+
+ και 
+\begin_inset Formula $\bar{\text{Α}}$
+\end_inset
+
+ αντί για Α'.
+\end_layout
+
+\begin_layout Quote
+
+\emph on
+Χρησιμοποιούμε τους κανόνες της άλγεβρας Boole για να απλοποιήσουμε τις
+ εξισώσεις:
+\end_layout
+
+\begin_layout Quote
+\begin_inset Formula 
+\begin{multline*}
+J_{A}=\bar{A}\bar{B}C\bar{x}+\bar{A}B\bar{C}x+\bar{A}BCx=\bar{A}\bar{B}C\bar{x}+\bar{A}Bx(\bar{C}+C)\overset{_{\{6\}}}{=}\\
+\overset{_{\{6\}}}{=}\bar{A}\bar{B}C\bar{x}+\bar{A}Bx*1=\bar{A}\bar{B}C\bar{x}+\bar{A}Bx
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+K_{A}=A\bar{B}\bar{C}\bar{x}+A\bar{B}\bar{C}x+A\bar{B}CX+AB\bar{C}x=A\bar{B}\bar{C}(\bar{x}+x)+A\bar{B}Cx+\\
++AB\bar{C}x\overset{_{\{6\}}}{=}A\bar{B}\bar{C}*1+A\bar{B}Cx+AB\bar{C}x=A\bar{B}(\bar{C}+Cx)+AB\bar{C}\overset{\mathrm{_{\{11\}}}}{=}\\
+\overset{\mathrm{_{\{11\}}}}{=}A\bar{B}(x+\bar{C})+AB\bar{C}x=A\bar{B}x+A\bar{B}\bar{C}+AB\bar{C}x=Ax(\bar{B}+B\bar{C})+\\
++A\bar{B}\bar{C}\overset{\mathrm{_{\{11\}}}}{=}Ax(\bar{C}+\bar{B})+A\bar{B}\bar{C}=A\bar{C}x+A\bar{B}x+A\bar{B}\bar{C}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+\begin_inset Formula 
+\begin{multline*}
+J_{B}=
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+\begin_inset Formula 
+\begin{multline*}
+K_{B}=
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+\begin_inset Formula 
+\begin{multline*}
+J_{C}=
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quote
+\begin_inset Formula 
+\begin{multline*}
+K_{C}=
+\end{multline*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -8255,7 +8467,11 @@ n
 \end_inset
 
 ), και προβλήματα όπου το output y(t) επηρεάζει τις καταστάσεις των flip-flop
- σε χρόνο (t+1).
+ σε χρόνο (t
+\series bold
++
+\series default
+1).
  Κυκλώματα με τέτοια χαρακτηριστικά, συνήθως, σχεδιάζονται με τη βοήθεια
  υπολογιστή, με τη χρήση της γλώσσας HDL.
  Δεν αποκλείεται ωστόσο σε μια βατή εξέταση να συναντήσετε, ως δευτερεύον
@@ -8276,6 +8492,17 @@ basic concepts
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+TODO: Add Mealy - Moore question: Which type is studied in our examples?
+ Why aren't there manual methods for both types? -Put theory questions first
+ so the background is set for exercises including e.g.
+ output.
+\end_layout
+
+\begin_layout Standard
+TODO: Accumulator, register, other essential circuit exposition.
 \end_layout
 
 \end_body
