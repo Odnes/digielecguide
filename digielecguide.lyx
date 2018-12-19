@@ -14,6 +14,7 @@
 \definecolor{pink}{RGB}{255, 130, 130}
 \definecolor{lime}{RGB}{23, 255, 23}
 \definecolor{orange}{RGB}{219, 215, 0}
+\DeclareMathSizes{10}{12}{7}{5}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -8373,10 +8374,11 @@ J_{A}=\bar{A}\bar{B}C\bar{x}+\bar{A}B\bar{C}x+\bar{A}BCx=\bar{A}\bar{B}C\bar{x}+
 
 \begin_inset Formula 
 \begin{multline*}
-K_{A}=A\bar{B}\bar{C}\bar{x}+A\bar{B}\bar{C}x+A\bar{B}CX+AB\bar{C}x=A\bar{B}\bar{C}(\bar{x}+x)+A\bar{B}Cx+\\
-+AB\bar{C}x\overset{_{\{6\}}}{=}A\bar{B}\bar{C}*1+A\bar{B}Cx+AB\bar{C}x=A\bar{B}(\bar{C}+Cx)+AB\bar{C}\overset{\mathrm{_{\{11\}}}}{=}\\
-\overset{\mathrm{_{\{11\}}}}{=}A\bar{B}(x+\bar{C})+AB\bar{C}x=A\bar{B}x+A\bar{B}\bar{C}+AB\bar{C}x=Ax(\bar{B}+B\bar{C})+\\
-+A\bar{B}\bar{C}\overset{\mathrm{_{\{11\}}}}{=}Ax(\bar{C}+\bar{B})+A\bar{B}\bar{C}=A\bar{C}x+A\bar{B}x+A\bar{B}\bar{C}
+K_{A}=A\bar{B}\bar{C}\bar{x}+A\bar{B}\bar{C}x+A\bar{B}CX+AB\bar{C}x=A\bar{B}\bar{C}(\bar{x}+x)+\\
++A\bar{B}Cx+AB\bar{C}x\overset{_{\{6\}}}{=}A\bar{B}\bar{C}*1+A\bar{B}Cx+AB\bar{C}x=\\
+=A\bar{B}(\bar{C}+Cx)+AB\bar{C}\overset{\mathrm{_{\{11\}}}}{=}A\bar{B}(x+\bar{C})+AB\bar{C}x=\\
+=A\bar{B}x+A\bar{B}\bar{C}+AB\bar{C}x=Ax(\bar{B}+B\bar{C})+A\bar{B}\bar{C}\\
+\overset{\mathrm{_{\{11\}}}}{=}Ax(\bar{C}+\bar{B})+A\bar{B}\bar{C}=A\bar{C}x+A\bar{B}x+A\bar{B}\bar{C}
 \end{multline*}
 
 \end_inset
