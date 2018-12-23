@@ -6242,7 +6242,7 @@ C
 
 \end_inset
 
-x
+x'
 \series default
 \color inherit
  
@@ -8365,8 +8365,10 @@ A
 \begin_layout Quote
 \begin_inset Formula 
 \begin{multline*}
-J_{A}=\bar{A}\bar{B}C\bar{x}+\bar{A}B\bar{C}x+\bar{A}BCx=\bar{A}\bar{B}C\bar{x}+\bar{A}Bx(\bar{C}+C)\overset{_{\{6\}}}{=}\\
-\overset{_{\{6\}}}{=}\bar{A}\bar{B}C\bar{x}+\bar{A}Bx*1=\bar{A}\bar{B}C\bar{x}+\bar{A}Bx
+J_{A}=\bar{A}\bar{B}C\bar{x}+\bar{A}B\bar{C}x+\bar{A}BCx=\\
+=\bar{A}\bar{B}C\bar{x}+\bar{A}Bx(\bar{C}+C)\overset{_{\{6\}}}{=}\\
+\overset{_{\{6\}}}{=}\bar{A}\bar{B}C\bar{x}+\bar{A}Bx*1=\\
+=\bar{A}\bar{B}C\bar{x}+\bar{A}Bx
 \end{multline*}
 
 \end_inset
@@ -8374,11 +8376,15 @@ J_{A}=\bar{A}\bar{B}C\bar{x}+\bar{A}B\bar{C}x+\bar{A}BCx=\bar{A}\bar{B}C\bar{x}+
 
 \begin_inset Formula 
 \begin{multline*}
-K_{A}=A\bar{B}\bar{C}\bar{x}+A\bar{B}\bar{C}x+A\bar{B}CX+AB\bar{C}x=A\bar{B}\bar{C}(\bar{x}+x)+\\
-+A\bar{B}Cx+AB\bar{C}x\overset{_{\{6\}}}{=}A\bar{B}\bar{C}*1+A\bar{B}Cx+AB\bar{C}x=\\
-=A\bar{B}(\bar{C}+Cx)+AB\bar{C}\overset{\mathrm{_{\{11\}}}}{=}A\bar{B}(x+\bar{C})+AB\bar{C}x=\\
-=A\bar{B}x+A\bar{B}\bar{C}+AB\bar{C}x=Ax(\bar{B}+B\bar{C})+A\bar{B}\bar{C}\\
-\overset{\mathrm{_{\{11\}}}}{=}Ax(\bar{C}+\bar{B})+A\bar{B}\bar{C}=A\bar{C}x+A\bar{B}x+A\bar{B}\bar{C}
+K_{A}=A\bar{B}\bar{C}\bar{x}+A\bar{B}\bar{C}x+A\bar{B}CX+AB\bar{C}x=\\
+=A\bar{B}\bar{C}(\bar{x}+x)+A\bar{B}Cx+AB\bar{C}x\overset{_{\{6\}}}{=}\\
+\overset{_{\{6\}}}{=}A\bar{B}\bar{C}*1+A\bar{B}Cx+AB\bar{C}x=\\
+=A\bar{B}(\bar{C}+Cx)+AB\bar{C}\overset{\mathrm{_{\{11\}}}}{=}\\
+\overset{\mathrm{_{\{11\}}}}{=}A\bar{B}(x+\bar{C})+AB\bar{C}x=\\
+=A\bar{B}x+A\bar{B}\bar{C}+AB\bar{C}x=\\
+=Ax(\bar{B}+B\bar{C})+A\bar{B}\bar{C}\overset{\mathrm{_{\{11\}}}}{=}\\
+\overset{\mathrm{_{\{11\}}}}{=}Ax(\bar{C}+\bar{B})+A\bar{B}\bar{C}=\\
+=A\bar{C}x+A\bar{B}x+A\bar{B}\bar{C}
 \end{multline*}
 
 \end_inset
@@ -8389,7 +8395,12 @@ K_{A}=A\bar{B}\bar{C}\bar{x}+A\bar{B}\bar{C}x+A\bar{B}CX+AB\bar{C}x=A\bar{B}\bar
 \begin_layout Quote
 \begin_inset Formula 
 \begin{multline*}
-J_{B}=
+J_{B}=\bar{A}\bar{B}\bar{C}\bar{x}+\bar{A}\bar{B}\bar{C}x+\bar{A}\bar{B}Cx+A\bar{B}\bar{C}\bar{x}+A\bar{B}C\bar{x}=\\
+=\bar{A}\bar{B}\bar{C}\bar{x}+\bar{A}\bar{B}x(\bar{C}+C)+A\bar{B}\bar{x}(\bar{C}+C)\overset{_{\{6\}}}{=}\\
+\overset{_{\{6\}}}{=}\bar{A}\bar{B}\bar{C}\bar{x}+\bar{A}\bar{B}x*1+A\bar{B}\bar{x}*1=\\
+=\bar{A}\bar{B}(\bar{C}\bar{x}+x)+A\bar{B}\bar{x}\overset{\mathrm{_{\{11\}}}}{=}\\
+\overset{\mathrm{_{\{11\}}}}{=}\bar{A}\bar{B}(\bar{C}+x)+A\bar{B}\bar{x}=\\
+=\bar{A}\bar{B}\bar{C}+\bar{A}\bar{B}x+A\bar{B}\bar{x}
 \end{multline*}
 
 \end_inset
@@ -8400,7 +8411,14 @@ J_{B}=
 \begin_layout Quote
 \begin_inset Formula 
 \begin{multline*}
-K_{B}=
+K_{B}=\bar{A}B\bar{C}\bar{x}+\bar{A}B\bar{C}x+\bar{A}BC\bar{x}+AB\bar{C}\bar{x}+AB\bar{C}x=\\
+=\bar{A}B\bar{C}(\bar{x}+x)+AB\bar{C}(\bar{x}+x)+\bar{A}BC\bar{x}\overset{_{\{6\}}}{=}\\
+\overset{_{\{6\}}}{=}\bar{A}B\bar{C}*1+AB\bar{C}*1+\bar{A}BC\bar{x}=\\
+=B\bar{C}(\bar{A}+A)+\bar{A}BC\bar{x}\overset{_{\{6\}}}{=}\\
+\overset{_{\{6\}}}{=}B\bar{C}*1+\bar{A}BC\bar{x}=\\
+=B(\bar{C}+\bar{A}C\bar{x})\overset{\mathrm{_{\{11\}}}}{=}\\
+\overset{\mathrm{_{\{11\}}}}{=}B(\bar{C}+\bar{A}\bar{x})=\\
+=B\bar{C}+\bar{A}B\bar{x}
 \end{multline*}
 
 \end_inset
@@ -8411,7 +8429,10 @@ K_{B}=
 \begin_layout Quote
 \begin_inset Formula 
 \begin{multline*}
-J_{C}=
+J_{C}=\bar{A}\bar{B}\bar{C}\bar{x}+A\bar{B}\bar{C}x+AB\bar{C}x=\\
+=\bar{A}\bar{B}\bar{C}\bar{x}+A\bar{C}x(\bar{B}+B)\overset{_{\{6\}}}{=}\\
+\overset{_{\{6\}}}{=}\bar{A}\bar{B}\bar{C}\bar{x}+A\bar{C}x*1=\\
+=\bar{A}\bar{B}\bar{C}\bar{x}+A\bar{C}x
 \end{multline*}
 
 \end_inset
@@ -8422,12 +8443,30 @@ J_{C}=
 \begin_layout Quote
 \begin_inset Formula 
 \begin{multline*}
-K_{C}=
+K_{C}=\bar{A}BCx+A\bar{B}C\bar{x}+A\bar{B}Cx=\\
+=\bar{A}BCx+A\bar{B}C(\bar{x}+x)\overset{_{\{6\}}}{=}\\
+\overset{_{\{6\}}}{=}\bar{A}BCx+A\bar{B}C*1=\\
+=\bar{A}BCx+A\bar{B}C
 \end{multline*}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Quote
+Παρατηρήστε ότι, γενικά, οι απλοποιημένες εξισώσεις που προκύπτουν είναι
+ διαφορετικές και ποιο σύνθετες από αυτές που λαμβάνουμε από τη μέθοδο με
+ τους χάρτες Karnaugh.
+ Αυτό συμβαίνει, εν μέρει, επειδή παραλείψαμε να συμπεριλάβουμε στις αρχικές
+ εξισώσεις τα μονώνυμα που αντιπροσωπεύουν τις συνθήκες αδιαφορίας.
+ Αυτή η παράλειψη έγινε σκοπίμως· είναι ο συμβιβασμός που κάνουμε ώστε οι
+ αναγκαίοι αλγεβρικοί μετασχηματισμοί για την απλοποίηση να είναι ευκολότεροι.
+\end_layout
+
+\begin_layout Quote
+Για τη συνέχεια της παρουσίασης, θα χρησιμοποιήσουμε τις εξισώσεις που εξήχθησαν
+ με τη μέθοδο των χαρτών Karnaugh.
 \end_layout
 
 \begin_layout Section
