@@ -2449,14 +2449,14 @@ C
 \end_layout
 
 \begin_layout Standard
-Σημείωση: Μπορεί να βρείτε τις εξόδους των flip-flop, 
+
 \series bold
-Q
+Σημείωση:
+\series default
+ Μπορεί να βρείτε τις εξόδους των flip-flop, Q
 \begin_inset script subscript
 
 \begin_layout Plain Layout
-
-\series bold
 A
 \end_layout
 
@@ -2466,8 +2466,6 @@ A
 \begin_inset script subscript
 
 \begin_layout Plain Layout
-
-\series bold
 B
 \end_layout
 
@@ -2477,24 +2475,12 @@ B
 \begin_inset script subscript
 
 \begin_layout Plain Layout
-
-\series bold
 C
 \end_layout
 
 \end_inset
 
-
-\series default
- 
-\series bold
-να συμβολίζονται
-\series default
- 
-\series bold
-απλούστερα και ως A, B, C
-\series default
-.
+ να συμβολίζονται απλούστερα και ως A, B, C.
 \end_layout
 
 \begin_layout Section
@@ -6714,8 +6700,11 @@ B
 
 \begin_layout Standard
 
+\series bold
 \shape italic
-Η ακόλουθη μέθοδος είναι προαιρετική.
+Σημείωση:
+\series default
+ Η ακόλουθη μέθοδος είναι προαιρετική.
  Εάν δεν έχετε χρόνο, προσπεράστε την.
 \begin_inset Newline newline
 \end_inset
@@ -8338,8 +8327,12 @@ C
 
 \begin_layout Standard
 \noindent
-Σημείωση: Στην ενότητα αυτή, για ευκρίνεια και για περαιτέρω εξοικείωση
- με το συμβολισμό, θα γράφουμε A αντί για Q
+
+\series bold
+Σημείωση:
+\series default
+ Στην ενότητα αυτή, για ευκρίνεια και για περαιτέρω εξοικείωση με το συμβολισμό,
+ θα γράφουμε A αντί για Q
 \begin_inset script subscript
 
 \begin_layout Plain Layout
@@ -8455,22 +8448,30 @@ K_{C}=\bar{A}BCx+A\bar{B}C\bar{x}+A\bar{B}Cx=\\
 \end_layout
 
 \begin_layout Standard
-Παρατηρήστε ότι, γενικά, οι απλοποιημένες εξισώσεις που προκύπτουν είναι
- διαφορετικές και ποιο σύνθετες από αυτές που λαμβάνουμε από τη μέθοδο με
- τους χάρτες Karnaugh.
- Αυτό συμβαίνει, εν μέρει, επειδή παραλείψαμε να συμπεριλάβουμε στις αρχικές
+Παρατηρήστε ότι οι απλοποιημένες εξισώσεις που προκύπτουν είναι διαφορετικές
+ και πιο σύνθετες από αυτές που λαμβάνουμε από τη μέθοδο με τους χάρτες
+ Karnaugh.
+ 
+\end_layout
+
+\begin_layout Standard
+Αυτό συμβαίνει, εν μέρει, επειδή παραλείψαμε να συμπεριλάβουμε στις αρχικές
  εξισώσεις τα μονώνυμα που αντιπροσωπεύουν τις συνθήκες αδιαφορίας.
  Αυτή η παράλειψη έγινε σκοπίμως· είναι ο συμβιβασμός που κάνουμε ώστε οι
- αναγκαίοι αλγεβρικοί μετασχηματισμοί για την απλοποίηση να είναι ευκολότεροι.
+ αλγεβρικοί μετασχηματισμοί για την απλοποίηση να είναι ευκολότεροι.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 
-\end_layout
-
-\begin_layout Standard
-Για τη συνέχεια της παρουσίασης, θα χρησιμοποιήσουμε τις εξισώσεις που εξήχθησαν
- με τη μέθοδο των χαρτών Karnaugh.
+\series bold
+Σημείωση:
+\series default
+ Για τη συνέχεια της παρουσίασης, θα χρησιμοποιήσουμε τις εξισώσεις που
+ εξήχθησαν με τη μέθοδο των χαρτών Karnaugh.
 \end_layout
 
 \begin_layout Section
