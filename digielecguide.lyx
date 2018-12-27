@@ -11,6 +11,8 @@
 \usepackage{xstring}
 \usepackage{karnaugh-map}
 \usepackage{amsmath}
+\usepackage{pdflscape}
+\usepackage{circuitikz}
 \definecolor{pink}{RGB}{255, 130, 130}
 \definecolor{lime}{RGB}{23, 255, 23}
 \definecolor{orange}{RGB}{219, 215, 0}
@@ -8479,8 +8481,100 @@ K_{C}=\bar{A}BCx+A\bar{B}C\bar{x}+A\bar{B}Cx=\\
 \end_layout
 
 \begin_layout Standard
-i.
- ΣΧΕΔΙΑΣΜΟΣ ΚΥΚΛΩΜΑΤΟΣ ΜΕ ΕΞΟΔΟ
+Σε αυτό το στάδιο, καλούμαστε να σχεδιάσουμε το κύκλωμα που αντιπροσωπεύουν
+ οι απλοποιημένες εξισώσεις εισόδων που δημιουργήσαμε.
+ Για να το πετύχουμε αυτό:
+\end_layout
+
+\begin_layout Itemize
+Ξεκινάμε από τα αριστερά, τοποθετώντας μια τελεία στον κάθετο άξονα για
+ κάθε flip-flop που συμμετέχει στις εξισώσεις εισόδου (A,B,C), και μια γραμμή
+ από όπου έρχεται η είσοδος x.
+\end_layout
+
+\begin_layout Itemize
+Κάθε επί (
+\begin_inset Formula $*$
+\end_inset
+
+) μεταξύ δύο παραγόντων σε κάποια εξίσωση εισόδου αντιπροσωπεύει μια λογική
+ πύλη OR, με εισόδους τους παράγοντες, και έξοδο το γινόμενο τους.
+\end_layout
+
+\begin_layout Itemize
+Κάθε συν(
+\begin_inset Formula $+$
+\end_inset
+
+) μεταξύ δύο μονωνύμων (γινομένων παραγόντων) σε κάποια εξίσωση εισόδου
+ αντιπροσωπεύει μια λογική πύλη AND, με εισόδους τους παράγοντες, και έξοδο
+ το άθροισμα τους.
+\end_layout
+
+\begin_layout Itemize
+Το συμπλήρωμα ενός παράγοντα (π.χ.
+ 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+) είναι η έξοδος μιας πύλης NOT, που δέχεται ως είσοδο τον αντίστοιχο παράγοντα.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Προσοχή:
+\series default
+ Όταν σχεδιάζουμε το κύκλωμα, είναι σημαντικό να ακολουθούμε τη σειρά των
+ πράξεων.
+ Σχεδιάζουμε πάντοτε πρώτες τις απεικονίσεις των γινομένων! 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Σημείωση:
+\series default
+ Για λόγους απλότητας στην απεικόνιση, θα χρησιμοποιηθούν λογικές πύλες
+ τριών εισόδων.
+ Εάν χρειαστεί να μεταχειριστείτε πιο σύνθετα γινόμενα ή αθροίσματα, εφαρμόστε
+ την επιμεριστική ιδιότητα.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{landscape} 
+\backslash
+begin{circuitikz} 
+\backslash
+draw (0,0) to[battery] (0,4) -- (4,4); 
+\backslash
+end{circuitikz} 
+\backslash
+end{landscape}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
