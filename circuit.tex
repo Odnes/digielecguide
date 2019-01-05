@@ -2,14 +2,55 @@
 \begin{circuitikz}
 
 \draw
-(0,11) node[draw,circle] {A}
-(0,8) node[draw,circle] {B}
-(0,5) node[draw,circle] {C}
-(-0.2,0) node[label={left:x}] {}
-(-0.2,0) -- (3,0)
+%Components scaled down
+
+%NOT port definitions
+(3.5,11) node[/tikz/circuitikz/bipoles/length=1cm,not port] (NOTA) {}
+(3.5,8) node[/tikz/circuitikz/bipoles/length=1cm,not port] (NOTB) {}
+(3.5,5) node[/tikz/circuitikz/bipoles/length=1cm,not port] (NOTC) {}
+(3.5,0.5) node[/tikz/circuitikz/bipoles/length=1cm,not port] (NOTx) {}
+
+%AND port definitions
+
+%OR port definitions (2nd column)
+
+%OR port definitions (1st column)
+
+
+
+
+%Horizontals from start 
+(0.5,11) node[label={below:A}] {}
+(0,11) -- (NOTA.in)
+
+(0.5,8) node[label={below:B}] {}
+(-0.2,8) -- (NOTB.in)
+
+(0.5,5) node[label={below:C}] {}
+(-0.4,5) -- (NOTC.in)
+
+(-0.6,0.5) node[label={left:x}] {}
+(-0.4,0.5) -- (NOTx.in)
+
+%Flip-flop feedback verticals from start
+%Q_A
+(0,11) -- (0,11.6) -- (19.6,11.6) 
+%Q_B
+(-0.2,8) -- (-0.2,11.8) -- (19.8,11.8)
+%Q_C
+(-0.4,5) -- (-0.4,12) -- (20,12)
 ;
 
 \end{circuitikz}
 \end{landscape}
 
 % Author: thcloak
+
+%=======================================TEST PARTS=========================================
+
+%(0,11) node[draw,circle] {A}
+%(0,8) node[draw,circle] {B}
+%(0,5) node[draw,circle] {C}
+
+%(10,9) node[and port] (test) {TEST}
+%(NOTA.out) -| (test.in 1)
