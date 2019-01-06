@@ -1,46 +1,87 @@
 \begin{landscape}
 \begin{circuitikz}
 
+%====================================================
+%Grid point definitions
+\coordinate (gridA) at (1,11);
+\coordinate (gridB) at (1.5,8);
+\coordinate (gridC) at (2,5);
+\coordinate (gridx) at (2.5,0.5);
+
+\coordinate (gridNOTA) at (4,11);
+\coordinate (gridNOTB) at (4.5,8);
+\coordinate (gridNOTC) at (5,5);
+\coordinate (gridNOTx) at (5.5,0.5);
+
+%OR grid points
+\coordinate (gridA'x) at (8.5,10.70);
+\coordinate (gridAB') at (8,9.70);
+\coordinate (gridC'x) at (7.5,8.70);
+%====================================================
+
 \draw
+
+%=====================================================
+%Port definitions
 %Components scaled down
 
-%NOT port definitions
 (3.5,11) node[/tikz/circuitikz/bipoles/length=1cm,not port] (NOTA) {}
 (3.5,8) node[/tikz/circuitikz/bipoles/length=1cm,not port] (NOTB) {}
 (3.5,5) node[/tikz/circuitikz/bipoles/length=1cm,not port] (NOTC) {}
 (3.5,0.5) node[/tikz/circuitikz/bipoles/length=1cm,not port] (NOTx) {}
 
+(7,10.70) node[/tikz/circuitikz/bipoles/length=1cm,or port] (A'x) {}
+(7,9.70) node[/tikz/circuitikz/bipoles/length=1cm,or port] (AB') {}
+(7,8.70) node[/tikz/circuitikz/bipoles/length=1cm,or port] (C'x) {}
+
+(10,11) node[/tikz/circuitikz/bipoles/length=1cm,or port] () {}
+
+%Triple OR kluge
+(10,) node[/tikz/circuitikz/bipoles/length=1cm,or port] () {}
+
+
 %AND port definitions
-
-%OR port definitions (2nd column)
-
-%OR port definitions (1st column)
-
-
-
-
-%Horizontals from start 
+%=====================================================
+%Start-bound horizontal grid 
 (0.5,11) node[label={below:A}] {}
 (0,11) -- (NOTA.in)
 
 (0.5,8) node[label={below:B}] {}
-(-0.2,8) -- (NOTB.in)
+(-0.2,8) -- (NOTB.in) 
+(NOTB.out) -- (gridNOTB)
 
 (0.5,5) node[label={below:C}] {}
 (-0.4,5) -- (NOTC.in)
+(NOTC.out) -- (gridNOTC)
 
 (-0.6,0.5) node[label={left:x}] {}
 (-0.4,0.5) -- (NOTx.in)
-
-%Flip-flop feedback verticals from start
+%=====================================================
+%Start-bound flip-flop feedback
 %Q_A
 (0,11) -- (0,11.6) -- (19.6,11.6) 
 %Q_B
 (-0.2,8) -- (-0.2,11.8) -- (19.8,11.8)
 %Q_C
 (-0.4,5) -- (-0.4,12) -- (20,12)
-;
+%=====================================================
+%Coordinate-bound grid connectors (always draw with "|-")
+(gridNOTA) |- (A'x.in 1)
+(gridx) |- (A'x.in 2)
 
+(gridA) |- (AB'.in 2)
+(gridNOTB) |- (AB'.in 1)
+
+(gridNOTC) |- (C'x.in 1)
+(gridx) |- (C'x.in 2)
+%=====================================================
+%OR grid horizontals
+(A'x.out) -- (gridA'x)
+(AB'.out) -- (gridAB')
+(C'x.out) -- (gridC'x)
+%=====================================================
+
+;
 \end{circuitikz}
 \end{landscape}
 
@@ -54,3 +95,5 @@
 
 %(10,9) node[and port] (test) {TEST}
 %(NOTA.out) -| (test.in 1)
+
+%NOTgrid end (5.5,11) -- (5.5,3)
