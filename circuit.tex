@@ -1,21 +1,16 @@
 \begin{landscape}
 \begin{circuitikz}
 
-%Grid priority heuristic:
-%Left to right -> Bottom to top (invert if direction is towards top)
+%Grid priority heuristic: Left to right -> Bottom to top (invert if direction is towards top)
+%Grid spacing: 0.5 up to OR inputs, 0.2 for AND and flip-flop inputs.
 
-%grid spacing: 0.5 for inputs, NOTs, 1nd degree ORs, 0.2 for 2nd degree ORs and triple ORs
-
-%Auxillary grid points
-\coordinate (AuxA) at (1,7.5);
-
-%====================================================
+%Auxillary grid point sources
+\coordinate (AuxNOTC) at (5,4);
+\coordinate (AuxA'x) at (7.1,7.20);
 
 \draw
-
 %====================================================
 %Grid point definitions
-
 (1,11) node[circ] (gridA) {}
 (1.5,8) node[circ] (gridB) {}
 (2,5) node[circ] (gridC) {}
@@ -26,42 +21,67 @@
 (5,5) node[circ] (gridNOTC) {}
 (5.5,0.5) node[circ] (gridNOTx) {}
 
-(7.5,10.70) node[circ] (gridA'x) {}
-(8,9.70) node[circ] (gridAB') {}
-(8.5,8.70) node[circ] (gridC'x) {}
+%OR grid points look good placed 0.1 to the right of their respective ports, unlike the NOTs' that need 0.5 for no reason whatsoever.
+(7.1,10.80) node[circ] (gridA'x) {}
+(7.6,9.80) node[circ] (gridAB') {}
+(8.1,8.80) node[circ] (gridC'x) {}
+
+(9.6,7.70) node[circ] (gridA'Bx) {}
+(10.1,6.70) node[circ] (gridAB'C') {}
+(10.6,5.70) node[circ] (gridAB'x') {}
+
+%"That lonely OR port..." grid point
+(11.1,5) node[circ] (gridC'x') {}
+
+(11.6,4.50) node[circ] (gridAC'x) {}
+
+%Triple OR (mostly) grid points
+(12.1,3.5) node[circ] (gridB'x) {}
+(12.6,2.5) node[circ] (gridB'Cx') {}
+(13.1,1.5) node[circ] (gridA'Bx') {}
+(13.6,0.5) node[circ] (gridA'B'x') {}
+
 
 %====================================================
 %Port definitions
 %Components scaled down
+%Max height: 11, Minimum height difference: 1
 
 (3.5,11) node[/tikz/circuitikz/bipoles/length=1cm,not port] (NOTA) {}
 (3.5,8) node[/tikz/circuitikz/bipoles/length=1cm,not port] (NOTB) {}
 (3.5,5) node[/tikz/circuitikz/bipoles/length=1cm,not port] (NOTC) {}
 (3.5,0.5) node[/tikz/circuitikz/bipoles/length=1cm,not port] (NOTx) {}
 
-(7,10.70) node[/tikz/circuitikz/bipoles/length=1cm,or port] (A'x) {}
-(7,9.70) node[/tikz/circuitikz/bipoles/length=1cm,or port] (AB') {}
-(7,8.70) node[/tikz/circuitikz/bipoles/length=1cm,or port] (C'x) {}
+(7,10.80) node[/tikz/circuitikz/bipoles/length=1cm,or port] (A'x) {}
+(7,9.80) node[/tikz/circuitikz/bipoles/length=1cm,or port] (AB') {}
+(7,8.80) node[/tikz/circuitikz/bipoles/length=1cm,or port] (C'x) {}
 
-%highest or: (10,11) node[/tikz/circuitikz/bipoles/length=1cm,or port] () {}
-%====================================================
-%Triple OR kluge (middle input anchors at node minus 0.65)
-(7,0.5) node[/tikz/circuitikz/bipoles/length=1cm,or port] (A'B'x') {}
-(gridNOTA) |- (A'B'x'.in 2)
-(gridNOTB) |- (A'B'x'.in 1)
-(gridNOTx) |- (6.35,0.5)
-
-(7,1.5) node[/tikz/circuitikz/bipoles/length=1cm,or port] (A'Bx') {}
-(gridNOTA) |- (A'Bx'.in 1)
-(gridB) |- (6.35,1.5)
-(gridNOTx) |- (A'Bx'.in 2)
-
+%Triple OR (mostly)
+(7,3.5) node[/tikz/circuitikz/bipoles/length=1cm,or port] (B'x) {}
 (7,2.5) node[/tikz/circuitikz/bipoles/length=1cm,or port] (B'Cx') {}
-(gridNOTB) |- (B'Cx'.in 1) 
-(gridC) |- (6.35, 2.5)
-(gridNOTx) |- (B'Cx'.in 2)
+(7,1.5) node[/tikz/circuitikz/bipoles/length=1cm,or port] (A'Bx') {}
+(7,0.5) node[/tikz/circuitikz/bipoles/length=1cm,or port] (A'B'x') {}
+
+%2nd order OR
+(9.5,7.70) node[/tikz/circuitikz/bipoles/length=1cm,or port] (A'Bx) {}
+(9.5,6.70) node[/tikz/circuitikz/bipoles/length=1cm,or port] (AB'C') {}
+(9.5,5.70) node[/tikz/circuitikz/bipoles/length=1cm,or port] (AB'x') {}
+(9.5,4.50) node[/tikz/circuitikz/bipoles/length=1cm,or port] (AC'x) {}
+
+%"That lonely OR port..."
+(11,5) node[/tikz/circuitikz/bipoles/length=1cm,or port] (C'x') {}
+
+%AND
+(15.5,10.8) node[/tikz/circuitikz/bipoles/length=1cm,and port] (J_A) {}
+(15.5,8.8) node[/tikz/circuitikz/bipoles/length=1cm,and port] (K_A) {}
+(15.5,6.8) node[/tikz/circuitikz/bipoles/length=1cm,and port] (J_B) {}
+(15.5,4.8) node[/tikz/circuitikz/bipoles/length=1cm,and port] (K_B) {}
+(15.5,2.8) node[/tikz/circuitikz/bipoles/length=1cm,and port] (J_C) {}
+%K_C slightly raised to give it room
+(15.5,1) node[/tikz/circuitikz/bipoles/length=1cm,and port] (K_C) {}
+
 %====================================================
-%Start-bound horizontal grid 
+%Start-bound horizontal connections
 (0.5,11) node[label={below:A}] {}
 (0,11) -- (NOTA.in)
 
@@ -85,6 +105,25 @@
 %Q_C
 (-0.4,5) -- (-0.4,12) -- (20,12)
 %====================================================
+%Horizontal connections
+
+%1st order ORs
+(A'x.out) -- (gridA'x)
+(AB'.out) -- (gridAB')
+(C'x.out) -- (gridC'x)
+
+%2nd order ORs
+(A'Bx.out) -- (gridA'Bx) 
+(AB'C'.out) -- (gridAB'C') 
+(AB'x'.out) -- (gridAB'x') 
+(AC'x.out) -- (gridAC'x) 
+
+%Triple ORs (mostly)
+(B'x.out) -- (gridB'x)
+(B'Cx'.out) -- (gridB'Cx')
+(A'Bx'.out) -- (gridA'Bx')
+(A'B'x'.out) -- (gridA'B'x')
+%====================================================
 %Direct grid connections (drawn with "|-")
 (gridNOTA) |- (A'x.in 1)
 (gridx) |- (A'x.in 2)
@@ -94,15 +133,62 @@
 
 (gridNOTC) |- (C'x.in 1)
 (gridx) |- (C'x.in 2)
-%====================================================
-%Auxillary grid connections
-(gridA) -- (AuxA) -- (3,7.5)
 
-%====================================================
-%OR grid horizontals
-(A'x.out) -- (gridA'x)
-(AB'.out) -- (gridAB')
-(C'x.out) -- (gridC'x)
+(gridNOTB) |- (B'x.in 1)
+(gridx) |- (B'x.in 2)
+
+(gridNOTx) |- (C'x'.in 1)
+(gridNOTC) -| (C'x'.in 2)
+
+(gridA'x) |- (A'Bx.in 1)
+(gridB) |- (A'Bx.in 2)
+
+(gridAB') |- (AB'C'.in 1)
+(gridNOTC) |- (AB'C'.in 2)
+
+(gridAB') |- (AB'x'.in 1)
+(gridNOTx) |- (AB'x'.in 2)
+
+(gridC'x) |- (AC'x.in 1)
+(gridA) |- (AC'x.in 2)
+
+%Triple OR kluge (middle input anchors at node minus 0.65)
+(gridNOTA) |- (A'B'x'.in 2)
+(gridNOTB) |- (A'B'x'.in 1)
+(gridNOTx) |- (6.35,0.5)
+
+
+(gridNOTA) |- (A'Bx'.in 1)
+(gridB) |- (6.35,1.5)
+(gridNOTx) |- (A'Bx'.in 2)
+
+
+(gridNOTB) |- (B'Cx'.in 1) 
+(gridC) |- (6.35, 2.5)
+(gridNOTx) |- (B'Cx'.in 2)
+
+%And port inputs + kluge (middle input anchors at node minus 0.85)
+(gridA'Bx) |- (J_A.in 1)
+(gridB'Cx') |- (J_A.in 2)
+
+(gridB'x) |- (K_A.in 1)
+(gridAB'C') |- (14.65,8.8)
+(gridC'x) |- (K_A.in 2)
+
+
+(gridA'x) -- (AuxA'x) -| (J_B.in 1)
+(gridAB'x') |- (14.65,6.8 )
+(gridC'x') |- (J_B.in 2)
+
+(gridA'Bx') |- (K_B.in 1)
+(gridNOTC) -- (AuxNOTC) -| (K_B.in 2)
+
+(gridAC'x) |- (J_C.in 1)
+(gridA'B'x') |- (J_C.in 2)
+
+(gridAB') |- (K_C.in 1)
+(gridA'Bx) |- (K_C.in 2)
+
 %====================================================
 
 ;
@@ -125,3 +211,18 @@
 % (0,0) node[circ] (coordname) {}
 
 %\coordinate (gridA) at (1,11);
+
+%(8.6, 6.1) node[circ] (AuxNOTA) {}
+%(9.1, 5.9) node[circ] (AuxB) {}
+%(9.6, 5.7) node[circ] (AuxNOTC) {}
+%(10.1, 5.5) node[circ] (AuxNOTx) {}
+
+%(AuxsrcNOTA) -- (AuxNOTA)
+%(AuxsrcB) -- (AuxB)
+%(AuxsrcNOTC) -- (AuxNOTC)
+%(gridNOTx) -- (AuxsrcNOTx) -- (AuxNOTx)
+
+%\coordinate (AuxsrcNOTA) at (4,6.1);
+%\coordinate (AuxsrcB) at (1.5,5.9);
+%\coordinate (AuxsrcNOTC) at (5,5.7);
+%\coordinate (AuxsrcNOTx) at (5.5,5.5);
