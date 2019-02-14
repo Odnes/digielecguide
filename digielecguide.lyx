@@ -103,22 +103,18 @@
 by thcloak
 \end_layout
 
-\begin_layout Address
-Original can be found at: github.com/thcloak/digielecguide
-\end_layout
-
-\begin_layout Part*
-Βασικές έννοιες
-\end_layout
-
-\begin_layout Part*
-Μεθοδολογία
+\begin_layout Standard
+\noindent
+Παρακάτω, παρουσιάζεται η βασική μεθοδολογία ανάλυσης και σχεδιασμού, ενός
+ τυπικού παραδείγματος σύγχρονου ακολουθιακού κυκλώματος.
+ Προαπαιτούμενη είναι η κατανόηση της λογικής συμπεριφοράς των διαφόρων
+ τύπων flip-flop και των λογικών πυλών (OR, AND, NOT κλπ).
+ 
 \end_layout
 
 \begin_layout Standard
-Παρακάτω παρουσιάζεται η βασική μεθοδολογία ανάλυσης και σχεδιασμού, ενός
- τυπικού παραδείγματος σύγχρονου ακολουθιακού κυκλώματος.
- Στις εξετάσεις, συχνά μας δίνεται η 
+\noindent
+Στις εξετάσεις, συχνά μας δίνεται η 
 \series bold
 λεκτική περιγραφή
 \series default
@@ -127,8 +123,7 @@ Original can be found at: github.com/thcloak/digielecguide
 \series bold
 λογικό διαγράμμα
 \series default
- του κυκλώματος (παραλλαγές, για έρευνα και περαιτέρω εξάσκηση, δίνονται
- άλυτες στο τέλος του κεφαλαίου της Μεθοδολογίας).
+ του κυκλώματος.
 \end_layout
 
 \begin_layout Section
@@ -159,8 +154,7 @@ Original can be found at: github.com/thcloak/digielecguide
 \begin_layout Standard
 Πρώτο μας βήμα, είναι να δώσουμε όνομα στις εισόδους και στις καταστάσεις
  του κυκλώματος.
- Το κείμενο λύσης της άσκησης θα δίνεται σε διακριτές παραγράφους, σε πλάγια
- γραφή:
+ 
 \end_layout
 
 \begin_layout Quote
@@ -2520,16 +2514,7 @@ C
 \series default
 για κάθε flip-flop του κυκλώματος μας.
  Ο πίνακας διέγερσης για οποιοδήποτε JK flip-flop, έχει την παρακάτω μορφή,
- η οποία προκύπτει λογικά από τη συμπεριφορά του στοιχείου (Μπορείτε να
- βρείτε την περιγραφή της συμπεριφοράς του JK flip-flop, στο κεφάλαιο 
-\begin_inset Quotes eld
-\end_inset
-
-Βασικές έννοιες
-\begin_inset Quotes erd
-\end_inset
-
-):
+ η οποία προκύπτει λογικά από τη συμπεριφορά του στοιχείου:
 \begin_inset Newline newline
 \end_inset
 
@@ -8357,13 +8342,16 @@ C
 \noindent
 
 \series bold
-Σημείωση:
+\shape italic
+Σημείωση
 \series default
- Στη συνέχεια, για ευκρίνεια και για περαιτέρω εξοικείωση με το συμβολισμό,
+: Στη συνέχεια, για ευκρίνεια και για περαιτέρω εξοικείωση με το συμβολισμό,
  θα γράφουμε A αντί για Q
 \begin_inset script subscript
 
 \begin_layout Plain Layout
+
+\shape italic
 A
 \end_layout
 
@@ -8496,6 +8484,7 @@ K_{C}=\bar{A}BCx+A\bar{B}C\bar{x}+A\bar{B}Cx=\\
 \begin_layout Standard
 
 \series bold
+\shape italic
 Σημείωση:
 \series default
  Για τη συνέχεια της παρουσίασης, θα χρησιμοποιήσουμε τις εξισώσεις που
@@ -8590,6 +8579,7 @@ K_{C}=\bar{A}BCx+A\bar{B}C\bar{x}+A\bar{B}Cx=\\
 
 
 \series bold
+\shape italic
 Σημείωση:
 \series default
  Για λόγους απλότητας στην απεικόνιση, θα χρησιμοποιηθούν λογικές πύλες
@@ -8619,76 +8609,96 @@ filename "circuit.tex"
 
 \end_layout
 
-\begin_layout Standard
-Σημαντικές επεκτάσεις αυτής της μεθοδολογίας, οι οποίες δεν αναφέρονται
- εδώ, αφορούν προβλήματα με πολλαπλές εισόδους (Χ
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-1
-\end_layout
-
+\begin_layout Paragraph
+Προτάσεις για επιπλέον μελέτη:
+\begin_inset Newline newline
 \end_inset
 
-,Χ
-\begin_inset script subscript
 
-\begin_layout Plain Layout
-2
 \end_layout
 
+\begin_layout Itemize
+Κυκλώματα με πολλαπλές εισόδους και/ή με έξοδο.
+\end_layout
+
+\begin_layout Itemize
+Κυκλώματα που επιδέχονται ελαχιστοποίησης καταστάσεων.
+\end_layout
+
+\begin_layout Itemize
+Διαφορές μηχανών Mealy, Moore.
+\end_layout
+
+\begin_layout Itemize
+Πολυπλέκτες
+\end_layout
+
+\begin_layout Itemize
+Κατανόηση τρόπου λειτουργίας καταχωρητών, μετρητών.
+\begin_inset Newline newline
 \end_inset
 
-,Χ
-\begin_inset script subscript
 
-\begin_layout Plain Layout
-n
 \end_layout
 
+\begin_layout Paragraph
+Επίλογος
+\begin_inset Newline newline
 \end_inset
 
-), και προβλήματα όπου το output y(t) επηρεάζει τις καταστάσεις των flip-flop
- σε χρόνο (t
-\series bold
-+
-\series default
-1).
- Κυκλώματα με τέτοια χαρακτηριστικά, συνήθως, σχεδιάζονται με τη βοήθεια
- υπολογιστή, με τη χρήση της γλώσσας HDL.
- Δεν αποκλείεται ωστόσο σε μια βατή εξέταση να συναντήσετε, ως δευτερεύον
- θέμα, κύκλωμα πολλαπλών εισόδων.
-\end_layout
 
-\begin_layout Standard
-TODO: Mention state minimisation
-\end_layout
-
-\begin_layout Standard
-TODO: Introduce logic gates in 
-\begin_inset Quotes eld
+\begin_inset Newline newline
 \end_inset
 
-basic concepts
-\begin_inset Quotes erd
+
+\end_layout
+
+\begin_layout Standard
+Το παρόν εγχειρίδιο έχει σκοπό να βοηθήσει το φοιτητή να προετοιμαστεί αποδοτικά
+ για το πρακτικό μέρος της εξέτασης του μαθήματος των ψηφιακών ηλεκτρονικών.
+ Για να το πετύχω αυτό, προσπάθησα να παράσχω ένα τυπικό και διαισθητικά
+ ομαλό παράδειγμα, με ταυτόχρονη την λεκτική έκθεση, αναλυτικά, της μεθοδολογίας.
+ Αυτός ο συνδυασμός ελπίζω να αντισκελίσει τις ατέλειες του έργου μου, και
+ να την καταστήσει προσβάσιμη σε περισσότερους τύπους αναγνώστη.
+\end_layout
+
+\begin_layout Standard
+Η αρχική μου φιλοδοξία ήταν, αρχικά, να καλύψω πλήρως την ύλη του μαθήματος,
+ τουλάχιστον μέσω κατάλληλων αναφορών σε άλλα έργα.
+ Αλλά το έργο αποδείχτηκε πιο δύσκολο, και πιο βαρετό, από ότι περίμενα.
+ Αποτέλεσμα της αναθεώρησης της κλίμακας του έργου, είναι το παρόν.
+ Ελπίζω, έστω σε αυτή τη μορφή, να σας φανεί χρήσιμο.
+\begin_inset Newline newline
 \end_inset
 
-.
+
+\begin_inset Newline newline
+\end_inset
+
+Για περισσότερα, δείτε το README στη διεύθυνση: 
 \end_layout
 
 \begin_layout Standard
-TODO: Add Mealy - Moore question: Which type is studied in our examples?
- Why aren't there manual methods for both types? -Put theory questions first
- so the background is set for exercises including e.g.
- output.
+http://www.github.com/thcloak/digielecguide 
+\begin_inset Newline newline
+\end_inset
+
+Σχόλια και διορθώσεις είναι παραπάνω από ευπρόσδεκτα.
+ Στείλτε τα στη διεύθυνση μου: odysseasnes@protonmail.com
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-TODO: Accumulator, register, other essential circuit exposition.
+Ευχαριστώ τον υπεύθυνο του μαθήματος, κ.
+ Ευριπίδη Γλαβά, για το ενδιαφέρον και την εμπιστοσύνη του.
 \end_layout
 
 \begin_layout Standard
-TODO: Make lists uniform
+\align right
+Ο συμφοιτητής σας, Οδυσσέας Νεσλεχανίδης
 \end_layout
 
 \end_body
