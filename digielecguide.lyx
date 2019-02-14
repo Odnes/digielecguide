@@ -44,6 +44,7 @@
 \use_hyperref true
 \pdf_title "Σημειώσεις για το μάθημα \"Ψηφιακά Ηλεκτρονικά\""
 \pdf_author "Odysseas Neslechanidis (aka thcloak)"
+\pdf_keywords "14Φεβρουαρίου2019"
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
 \pdf_bookmarksopen false
@@ -71,7 +72,7 @@
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
-\suppress_date false
+\suppress_date true
 \justification true
 \use_refstyle 1
 \index Index
@@ -8694,6 +8695,10 @@ http://www.github.com/thcloak/digielecguide
 \begin_layout Standard
 Ευχαριστώ τον υπεύθυνο του μαθήματος, κ.
  Ευριπίδη Γλαβά, για το ενδιαφέρον και την εμπιστοσύνη του.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
