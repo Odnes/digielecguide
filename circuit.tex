@@ -8,9 +8,20 @@
 \coordinate (AuxNOTC) at (5,4);
 \coordinate (AuxA'x) at (7.1,7.20);
 
+%Flip-flop feedback anchors
+\coordinate (anchorQ_A) at (19.6,11.6);
+\coordinate (anchorQ_B) at (19.8,11.8);
+\coordinate (anchorQ_C) at (20,12);
+
+%Clk plugs
+\coordinate (ClkplugA) at (17.5,9.8);
+\coordinate (ClkplugB) at (17.5,5.8);
+\coordinate (ClkplugC) at (17.5,1.8);
+
 \draw
 %====================================================
 %Grid point definitions
+
 (1,11) node[circ] (gridA) {}
 (1.5,8) node[circ] (gridB) {}
 (2,5) node[circ] (gridC) {}
@@ -41,6 +52,8 @@
 (13.1,1.5) node[circ] (gridA'Bx') {}
 (13.6,0.5) node[circ] (gridA'B'x') {}
 
+%Clk
+(16.5, 0.5) node[label={below:Clk}] (Clksrc) {}
 
 %====================================================
 %Port definitions
@@ -80,6 +93,45 @@
 %K_C slightly raised to give it room
 (15.5,1) node[/tikz/circuitikz/bipoles/length=1cm,and port] (K_C) {}
 
+%Flip-flops (Drawn by hand... sorry for this ugliness, time's up and
+%I gotta move on.)
+
+%A
+(17.5,11.1) -- (17.5,8.5) -- (19,8.5) -- (19,11.1) -- (17.5,11.1)
+(17.5,10.6) node[circ] (plugJ_A) {}
+(17.2,10.6) node[label={above:J}] {}
+(17.5,9) node[circ] (plugK_A) {}
+(17.2,9) node[label={below:K}] {}
+(19,9.8) node[circ] (plugQ_A) {}
+(19.3,9.8) node[label={above:Q}] {}
+(18.5,11.1) node[label={below:A}] {}
+%Clk plug triangle (plug defined as \coordinate)
+(17.5, 9.9) -- (17.7, 9.8) -- (17.5, 9.7)
+
+%B
+(17.5,7.1) -- (17.5,4.5) -- (19,4.5) -- (19,7.1) -- (17.5, 7.1)
+(17.5,6.6) node[circ] (plugJ_B) {}
+(17.2,6.6) node[label={above:J}] {}
+(17.5,5) node[circ] (plugK_B) {}
+(17.2,5) node[label={below:K}] {}
+(19,5.8) node[circ] (plugQ_B) {}
+(19.3,5.8) node[label={above:Q}] {}
+(18.5,7.1) node[label={below:B}] {}
+%Clk plug triangle (plug defined as \coordinate)
+(17.5, 5.9) -- (17.7, 5.8) -- (17.5, 5.7)
+
+%C
+(17.5,3.1) -- (17.5,0.5) -- (19,0.5) -- (19,3.1) -- (17.5, 3.1)
+(17.5,2.6) node[circ] (plugJ_C) {}
+(17.2,2.6) node[label={above:J}] {}
+(17.5,1) node[circ] (plugK_C) {}
+(17.2,1) node[label={below:K}] {}
+(19,1.8) node[circ] (plugQ_C) {}
+(19.3,1.8) node[label={above:Q}] {}
+(18.5,3.1) node[label={below:C}] {}
+%Clk plug triangle (plug defined as \coordinate)
+(17.5, 1.9) -- (17.7, 1.8) -- (17.5, 1.7)
+
 %====================================================
 %Start-bound horizontal connections
 (0.5,11) node[label={below:A}] {}
@@ -97,13 +149,14 @@
 (-0.4,0.5) -- (NOTx.in)
 (NOTx.out) -- (gridNOTx)
 %====================================================
-%Start-bound flip-flop feedback
+%Start-bound flip-flop feedback (anchors defined as \coordinate)
 %Q_A
-(0,11) -- (0,11.6) -- (19.6,11.6) 
+(0,11) -- (0,11.6) -- (anchorQ_A) |- (plugQ_A)
 %Q_B
-(-0.2,8) -- (-0.2,11.8) -- (19.8,11.8)
+(-0.2,8) -- (-0.2,11.8) -- (anchorQ_B) |- (plugQ_B)
 %Q_C
-(-0.4,5) -- (-0.4,12) -- (20,12)
+(-0.4,5) -- (-0.4,12) -- (anchorQ_C) |- (plugQ_C)
+
 %====================================================
 %Horizontal connections
 
@@ -189,6 +242,16 @@
 (gridAB') |- (K_C.in 1)
 (gridA'Bx) |- (K_C.in 2)
 
+%Flip-flop inputs
+(J_A.out) |- (plugJ_A)
+(K_A.out) |- (plugK_A)
+(J_B.out) |- (plugJ_B)
+(K_B.out) |- (plugK_B)
+(J_C.out) |- (plugJ_C)
+(K_C.out) |- (plugK_C)
+(Clksrc) |- (ClkplugA)
+(Clksrc) |- (ClkplugB)
+(Clksrc) |- (ClkplugC)
 %====================================================
 
 ;
